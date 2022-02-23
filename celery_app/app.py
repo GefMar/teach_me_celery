@@ -7,4 +7,4 @@ app = Celery(
     backend=CELERY_BACKEND,
     include=["celery_app.tasks", ],
 )
-
+app.conf.task_queue_max_priority = 4
