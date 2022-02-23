@@ -9,7 +9,7 @@ def download_page(url):
     response = requests.get(url)
     file_name = f"{uuid.uuid4()}.html"
     file_path = settings.html_path.joinpath(file_name)
-    with open(file_path, "wb", encoding="UTF-8") as file:
+    with open(file_path, "wb") as file:
         file.write(response.content)
     return file_path
 

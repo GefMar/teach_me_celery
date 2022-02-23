@@ -6,3 +6,4 @@ app = Celery(
     broker=CELERY_BROKER,
     include=["celery_app.tasks", ],
 )
+
