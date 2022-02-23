@@ -11,7 +11,7 @@ def download_page(url):
     file_path = settings.html_path.joinpath(file_name)
     with open(file_path, "wb") as file:
         file.write(response.content)
-    return file_path
+    return str(file_path)
 
 
 @app.task(name="parse_page")
