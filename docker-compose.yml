@@ -3,6 +3,6 @@ version: '3.3'
 services:
   teach_me_celery_worker:
     build: ./
-    command: celery -A tasks worker --loglevel=INFO
+    command: celery -A celery_app worker --loglevel=INFO
     volumes:
       - ./:/teach_me_celery
