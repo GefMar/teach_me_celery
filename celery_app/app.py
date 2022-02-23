@@ -10,5 +10,5 @@ app = Celery(
     include=["celery_app.tasks", ],
 )
 app.conf.task_queue_max_priority = 10
-# app.conf.task_default_priority = 1
+app.conf.task_default_priority = 1
 # app.conf.result_expires = datetime.timedelta(hours=2)

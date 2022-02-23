@@ -4,7 +4,7 @@ from .app import app
 import settings
 
 
-@app.task(name="download_page")
+@app.task(name="download_page", priority=1)
 def download_page(url):
     response = requests.get(url)
     file_name = f"{uuid.uuid4()}.html"
