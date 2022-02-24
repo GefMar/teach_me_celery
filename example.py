@@ -1,4 +1,5 @@
 from celery_app.tasks import download_page
+from celery_app import worker_app
 
 # from celery_app import worker_app
 # from celery import Celery
