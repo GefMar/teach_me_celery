@@ -8,7 +8,7 @@ routes = {
 app = Celery(
     "teach_me",
     broker=CELERY_BROKER,
-    # backend=CELERY_BACKEND,
+    backend=CELERY_BACKEND,
     include=["celery_app.tasks", ],
 )
 
